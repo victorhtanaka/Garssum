@@ -1,0 +1,236 @@
+@import url(https://fonts.google.com/specimen/Hanken+Grotesk?query=grotesk);
+
+body {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 10%;
+  background-color: #26DD9B;
+}
+
+.containerl1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 22px 10%;
+    margin-top: 6%
+}
+
+.leftcont {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+}
+
+.salad {
+  margin-left: 0%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-size: 14;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  column-gap: 40px;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  position: relative;
+}
+
+.sla {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.item1 {
+  color: #C2C2C2;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.item2 {
+    color: #3E4542;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.item3 {
+    color: #989898;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-right: 30%;
+}
+
+.cta1 {
+    text-decoration: none;
+    color:#26DD9B;
+    padding: 9px 25px;
+    background-color: rgb(255, 255, 255);
+    outline: 2px solid white;
+    outline-offset: -2px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 0 #26DD9B;
+    transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
+    
+}
+.cta2 {
+    text-decoration: none;
+    padding: 9px 25px;
+    outline: 2px solid white;
+    outline-offset: -2px;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 0 #26DD9B;
+    color: #ffffff;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+
+.cta3 {
+    text-decoration: none;
+    color:#ffffff;
+    padding: 14px 25px;
+    background: linear-gradient(90deg, #26DD9B 0%, #74EE9B 100%);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 64%;
+    box-shadow: inset 0 0 0 0 #26DD9B;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.cta2:hover {
+  box-shadow: inset 160px 0 0 0 #ffffff;
+  color: #26DD9B;
+}
+
+.cta1:hover {
+  box-shadow: inset 120px 0 0 0 #26DD9B;
+  color: #ffffff;
+}
+
+.cta3:hover {
+  box-shadow: inset 260px 0 0 0 #74EE9B;
+  color: #ffffff;
+}
+
+.nav__links li a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: -4;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.nav__links li a:hover::before {
+transform-origin: left;
+transform: scaleX(1);
+}
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
