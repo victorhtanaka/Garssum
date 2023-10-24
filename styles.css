@@ -10,6 +10,12 @@ body {
   padding: 0;
 }
 
+.logcad {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 14px;
+}
+ /*EU ME TORNEI O SENHOR FLEXBOX*/
 header {
   display: flex;
   justify-content: space-between;
@@ -18,7 +24,7 @@ header {
   background-color: #26DD9B;
 }
 
-.containerl1 {
+.container1 {
     display: flex;
     justify-content: space-around;
     padding: 22px 10%;
@@ -80,7 +86,6 @@ header {
 
 .item2 {
     color: #3E4542;
-    font-family: "Montserrat", sans-serif;
     font-size: 50px;
     font-style: normal;
     font-weight: 500;
@@ -89,7 +94,6 @@ header {
 
 .item3 {
     color: #989898;
-    font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -165,6 +169,129 @@ header {
 transform-origin: left;
 transform: scaleX(1);
 }
+
+.about {
+  padding: 30px 20%;
+  margin-top: 6%;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 70px;
+}
+
+.textabout{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.toptext {
+    color: #3E4542;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.bottomtext {
+    color: #989898;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools {
+  padding: 22px 10%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title1 {
+  color: #3E3E3E;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 48px;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.title2 {
+  color: #3E3E3E;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  
+  font-weight: 400;
+
+}
+
+.intro1 {
+  color: #747474;
+  text-align: center;
+  padding: 22px 21%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+}
+
+.toolsdetail {
+  padding: 50px 5%;
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-around;
+}
+
+.tool1 {
+  padding: 10px 1%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: space-around;
+}
+
+
+.container1 img {
+transition: 0.8s ease;
+}
+
+.container1 img:hover{
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+transition: 0.6s ease;
+}
+
+.container2 img {
+transition: 0.8s ease;
+}
+
+.container2 img:hover{
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+transition: 0.6s ease;
+}
+
+.container3 img {
+transition: 0.8s ease;
+}
+
+.container3 img:hover{
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+transition: 0.6s ease;
+}
+
 /* Mobile Nav */
 
 .menu {
