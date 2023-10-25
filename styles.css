@@ -296,7 +296,6 @@ transition: 0.6s ease;
   flex-direction: column;
 }
 
-
 .caseinfo {
   display: flex;
   flex-direction: column;
@@ -313,7 +312,7 @@ transition: 0.6s ease;
 }
 
 .cube {
-  margin-left: 150px;
+  margin-left: 290px;
   padding: 20px;
   width: 60%;
   height: 60%;
@@ -326,12 +325,42 @@ transition: 0.6s ease;
   background-color: #ff7373;
 }
 
+
+
+
+
+
+
+
 .footer1 {
-  background: #26DD9B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 10%;
+  background-color: #26DD9B;
+  color: white;
 }
 
-.container5 {
-  background: #26DD9B;
+.footertopdiv {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 250px;
+  margin-bottom: 14%;
+}
+
+.footertext {
+  display: flex;
+  text-align: center;
+  column-gap: 50px;
+  padding: 60px;
+  margin-bottom: 14%;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
 }
 
 /* Mobile Nav */
