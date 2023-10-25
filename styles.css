@@ -9,7 +9,7 @@
   font-family: "GalakRound";
   src: url('GalakRound/GalakRound-Medium.ttf') format("truetype");
   font-style: normal;    
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @font-face {
@@ -19,13 +19,20 @@
   font-weight: 200;
 }
 
-body {
+@font-face {
   font-family: "GalakRound";
-  text-decoration: none;
+  src: url('GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  font-style: normal;    
   font-weight: 400;
 }
 
+body {
+  font-family: "GalakRound";
+  text-decoration: none;
+}
+
 * {
+  text-decoration: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -62,9 +69,6 @@ header {
 }
 
 
-.logo {
-  cursor: pointer;
-}
 
 .nav__links a,
 .cta,
@@ -120,7 +124,6 @@ header {
 }
 
 .cta1 {
-  text-decoration: none;
   color:#26DD9B;
   padding: 9px 25px;
   background-color: rgb(255, 255, 255);
@@ -131,7 +134,6 @@ header {
   transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 .cta2 {
-  text-decoration: none;
   padding: 9px 25px;
   outline: 2px solid white;
   outline-offset: -2px;
@@ -142,7 +144,6 @@ header {
   }
 
 .cta3 {
-  text-decoration: none;
   color:#ffffff;
   padding: 16px 14%;
   margin-right: 38%;
@@ -225,7 +226,7 @@ transform: scaleX(1);
 
 .tools {
   padding: 22px 10%;
-  margin-top: 10%;
+  margin-top: 12%;
   display: flex;
   row-gap: 14px;
   flex-direction: column;
@@ -262,8 +263,8 @@ transform: scaleX(1);
   color: #848484;
   text-align: center;
   padding: 18px 14%;
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 18px;
+  font-weight: 200;
   line-height: 160%;
 }
 
@@ -328,34 +329,21 @@ transition: 0.6s ease;
 }
 
 .cta4 {
-  text-decoration: none;
   color:#ffffff;
-  padding: 16px 14%;
+  padding: 16px 3%;
   background: linear-gradient(90deg, #26DD9B 0%, #74EE9B 100%);
   border-radius: 6px;
 }
 
 .cube {
   display: flex;
-  justify-content: space-between;
-  padding: 180px;
-  width: 60%;
-  height: 60%;
+  column-gap: 10px;
+  justify-content: space-around;
+  padding: 40px 14%;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.10);
 }
-
-.personaimg {
-  background-color: #ff7373;
-}
-
-
-
-
-
-
-
 
 .footer1 {
   display: flex;
@@ -374,7 +362,6 @@ transition: 0.6s ease;
   
 }
 
-
 .footertext {
   display: flex;
   text-align: center;
@@ -387,6 +374,10 @@ transition: 0.6s ease;
   justify-content: center;
   column-gap: 10px;
 }
+
+
+
+
 
 /* Mobile Nav */
 
