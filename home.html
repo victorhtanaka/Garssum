@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="logo" href="/"><img src="images/Group 3.svg" alt="logo"></a>
+        <form>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes()">
+              <select>
+                <option>Filtros</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes">
+              <label for="one">
+                <input type="checkbox" id="one" />Opção 1</label>
+              <label for="two">
+                <input type="checkbox" id="two" />Opção 2</label>
+              <label for="three">
+                <input type="checkbox" id="three" />Opção 3</label>
+            </div>
+          </div>
+        </form>
+        <div class="icons">
+            <a class="message" href="#"><img src="images/message.svg" alt="/"></a>
+            <a class="profile" href="#"><img src="images/profile.svg" alt="/"></a>
+        </div>
+    </header>
+</body>
+</html>
