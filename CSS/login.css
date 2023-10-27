@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "GalakRound";
+    src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+    font-style: normal;    
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: "GalakRound";
+    src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+    font-style: normal;    
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "GalakRound";
+    src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+    font-style: normal;    
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: "GalakRound";
+    src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+    font-style: normal;    
+    font-weight: 400;
+  }
+
+* {
+    font-family: "GalakRound";
+    margin: 0;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.banner-div {
+    height: 100vh;
+}
+
+.banner-div img {
+    max-width: 100%;
+    max-height: 100%; 
+    display: block; 
+    margin: auto; 
+}
+
+.register-div {
+    padding: 10% 0 0 10%;
+    background-color: #fff; 
+    height: 100vh;
+}
+
+.register-div h1 {
+    font-size: 4rem;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 150px;
+}
+
+.log-status {
+    text-align: left;
+    background-color: #26DD9B;
+    height: 30px;
+    border-radius: 5px 5px 0px 5px;
+}
+
+.log-overlay {
+    width: 100%;
+    height: 90%;
+    background: #fff;
+}
+
+.cad-status {
+    text-align: right;
+    justify-content: center;
+    background: #EBEBEB ;
+    height: 30px;
+    border-radius: 5px 5px 5px 0;
+}
+
+.cad-overlay {
+    width: 100%;
+    height: 90%;
+    background: #fff;
+}
+
+.log-status a {
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+.cad-status a {
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+.input-box input {
+    height: 60px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    margin: 10px 0;
+}
+
+#entrar-btn {
+    margin: 30px 0;
+    background: #26DD9B;
+    background: linear-gradient(to right, #26DD9B, #74EE9B );
+    color: #fff;
+    border: none;
+    height: 60px;
+    width: 130px;
+    border-radius: 5px;
+}
+
+#entrar-btn:hover {
+    background: #ffffff;
+    color: #26DD9B;
+    border: 2px solid #26DD9B;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #26DD9B;
+    border-radius: 4px;
+    height: 30px;
+}
+
+.input:focus{
+    outline-width: 0;
+    border-width: 1px;
+    border-color: #26DD9B;
+    border-style: solid;
+}
+
+.input:focus::placeholder {
+    color: transparent;
+    border: none;
+}
+
+
+
+
+
+
+
+
