@@ -47,15 +47,24 @@ h2 {
 
 .cta {
   font-weight: 300;
-    font-size: 20px;
-    color: white;
-    padding: 22px 46px;
-    border-radius: 14px;
-    background: linear-gradient(90deg, #26DD9B 0%, #74EE9B 100%);
+  font-size: 20px;
+  color: white;
+  padding: 22px 46px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #26DD9B 0%, #74EE9B 100%);
+  transition: 0.8s ease;
+}
+
+.cta:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.6s ease;
 }
 
 .leftdiv {
-    padding: 100px 10%;
+  margin-top: 1%;
+  padding: 100px 10%;
 }
 
 section {

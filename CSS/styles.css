@@ -290,36 +290,36 @@ transform: scaleX(1);
 }
 
 .container1 img {
-transition: 0.8s ease;
+  transition: 0.8s ease;
 }
 
 .container1 img:hover{
--webkit-transform: scale(1.1);
--ms-transform: scale(1.1);
-transform: scale(1.1);
-transition: 0.6s ease;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.6s ease;
 }
 
 .container2 img {
-transition: 0.8s ease;
+  transition: 0.8s ease;
 }
 
 .container2 img:hover{
--webkit-transform: scale(1.1);
--ms-transform: scale(1.1);
-transform: scale(1.1);
-transition: 0.6s ease;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.6s ease;
 }
 
 .container3 img {
-transition: 0.8s ease;
+  transition: 0.8s ease;
 }
 
 .container3 img:hover{
--webkit-transform: scale(1.1);
--ms-transform: scale(1.1);
-transform: scale(1.1);
-transition: 0.6s ease;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.6s ease;
 }
 
 .container4 {
