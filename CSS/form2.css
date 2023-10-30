@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 400;
+}
+
+section {
+    align-items: center;
+    overflow: visible;
+}
+
+.div1 {
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    padding:10px;
+    text-align: center;
+    border-radius: 10px;
+    font-family: "GalakRound";
+    opacity: 0.5;
+    background: #a8a8a8;
+    box-shadow: 0px 0px 200px 0px rgba(0, 0, 0, 0.20);
+    overflow: visible;
+    float: left;
+}
+
+a {
+    position: absolute;
+    height: 50px;
+    background: #6ed095;
+    padding: 10px
+}
