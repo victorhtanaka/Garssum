@@ -11,7 +11,8 @@
     <section>
         <form id="postreg" action="">
 
-            <div class="balls" style="text-align:center;margin-top:30px;">
+            <!--Bolas de progresso-->
+            <div style="text-align:center;margin-top:30px;">
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
@@ -20,12 +21,12 @@
                 <span class="step"></span>
             </div><br>
 
-
+            <!--Ilustração do form-->
             <div class="img">
                 <img src="images/formillust.svg" alt="">
             </div>
 
-
+            <!--Primeira Parte-->
             <div class="tab">
                 <h1>Qual seu sexo?</h1>
                 <select>
@@ -36,8 +37,7 @@
                 <br>
             </div>
 
-
-
+            <!--Segunda Parte-->
             <div class="tab">
                 <h1>Qual seu objetivo?</h1>
                 <select>
@@ -49,8 +49,7 @@
                 <br>
             </div>
 
-
-
+            <!--Terceira Parte-->
             <div class="tab">
                 <h1>Qual seu peso?</h1>
                 <p class="kgp"><input placeholder="Peso" oninput="this.className = ''">KG</p>
@@ -59,7 +58,7 @@
                 <br>
             </div>
 
-
+            <!--Quarta Parte-->
             <div class="tab">
                 <h1>Qual sua altura?</h1>
                 <p class="kgp"><input placeholder="Altura" oninput="this.className = ''">CM</p>
@@ -68,7 +67,7 @@
                 <br>
             </div>
 
-
+            <!--Quinta Parte-->
             <div class="tab">
                 <h1>Qual seu nível de atividades físicas?</h1>
                 <select>
@@ -76,11 +75,10 @@
                     <option value="1" oninput="this.className = ''">Leve</option>
                     <option value="2" oninput="this.className = ''">Moderado</option>
                     <option value="3" oninput="this.className = ''">Intenso</option>
-                </select><br>
-               
-            </div>
+                </select>
+            </div><br>
 
-
+            <!--Sexta Parte-->
             <div class="tab">
                 <h1>Qual seu objetivo?</h1>
                 <select>
@@ -88,11 +86,10 @@
                     <option value="1" oninput="this.className = ''">Emagrecer</option>
                     <option value="2" oninput="this.className = ''">Ganhar peso</option>
                     <option value="3" oninput="this.className = ''">Manter peso</option>
-                </select><br>
-                
-            </div>
+                </select>
+            </div><br>
 
-
+            <!--Botões de Progresso-->
             <div class="next" style="overflow:auto;">
                 <div class="nextoptions" style="float:right;">
                     <button type="button" id="prevBtn" onclick="nextPrev(-1)">Voltar</button>
@@ -100,9 +97,8 @@
                 </div>
             </div>
 
-
+            <!--Quit-->
             <a href="/">Deixar para mais tarde</a>
-
 
         </form>
     </section>
