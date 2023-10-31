@@ -26,6 +26,11 @@
   font-weight: 400;
 }
 
+.illust {
+  display: flex;
+  justify-content: center;
+}
+
 :root {
   --primary-color: #26dd9b;
 }
