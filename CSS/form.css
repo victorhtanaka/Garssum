@@ -42,7 +42,6 @@
     min-width: 300px;
     border-radius: 20px;
     box-shadow: 0px 0px 200px 0px rgba(0, 0, 0, 0.20);
-
 }
 
 /* Style the input fields */
@@ -122,6 +121,10 @@ a {
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #04AA6D;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .next button {
