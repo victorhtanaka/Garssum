@@ -62,16 +62,19 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    row-gap: 6em;
-    padding: 80px 6%;
+    row-gap: 7em;
+    padding: 70px 6%;
 }
 
 .sair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6px;
     font-size: 16px;
     margin-left: 14px;
     margin-right: 14px;
     padding: 10px;
-    text-align: center;
     color: white;
     border-radius: 8px;
     background: linear-gradient(270deg, #EF6E5D -113.27%, #FE3B22 100%);
