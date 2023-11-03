@@ -48,7 +48,7 @@
 }
 
 .op {
-    font-size: 16px;
+    font-size: 14px;
     color: #B2B2B2;
     display: flex;
     column-gap: 12px;
@@ -59,7 +59,6 @@
 }
 
 .leftdiv {
-    justify-content: center;
     display: flex;
     flex-direction: column;
     row-gap: 7em;
@@ -71,7 +70,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 6px;
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 14px;
     margin-right: 14px;
     padding: 10px;
