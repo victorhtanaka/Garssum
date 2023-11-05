@@ -1,27 +1,27 @@
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-Light.otf') format("opentype");
   font-style: normal;    
   font-weight: 300;
 }
 
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-Medium.otf') format("opentype");
   font-style: normal;    
   font-weight: 500;
 }
 
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-GalakProThin.otf') format("opentype");
   font-style: normal;    
   font-weight: 200;
 }
 
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-GalakProRegular.otf') format("opentype");
   font-style: normal;    
   font-weight: 400;
 }
