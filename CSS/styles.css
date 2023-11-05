@@ -166,7 +166,7 @@ header {
 
 .cta1:hover {
   box-shadow: inset 120px 0 0 0 #26DD9B;
-  color: #ffffff;
+  color: transparent;
 }
 
 .cta3:hover {

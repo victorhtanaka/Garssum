@@ -40,13 +40,13 @@ body {
 }
 
 .alloptions {
-    row-gap: 1em;
+    row-gap: 1.2em;
     display: flex;
     flex-direction: column;
 }
 
 .alloptions div {
-    font-size: 14px;
+    font-size: 13px;
     color: #B2B2B2;
     display: flex;
     column-gap: 12px;
@@ -59,7 +59,7 @@ body {
 .leftdiv {
     display: flex;
     flex-direction: column;
-    row-gap: 7em;
+    row-gap: 6em;
     padding: 70px 6%;
 }
 
@@ -68,7 +68,7 @@ body {
     justify-content: center;
     align-items: center;
     column-gap: 6px;
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 14px;
     margin-right: 14px;
     padding: 10px;
@@ -124,7 +124,33 @@ body {
 }
 
 .rightdiv1 {
-  display: none;
+  display: flex;
+
+}
+
+.rightdiv1 img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.rightdiv1 a {
+  position: absolute;
+  color: #ffffff;
+  margin-left: 50%;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  padding: 12px 2.6%;
+  flex-shrink: 0;
+  margin-top: 5.6%;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  color: #ffffff;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+} 
+
+.rightdiv1 a:hover {
+  box-shadow: inset 166px 0 0 0 #ffffff;
+  color: #26DD9B;
 }
 
 .rightdiv2 {
