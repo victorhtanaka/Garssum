@@ -60,7 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 6em;
-    padding: 70px 6%;
+    padding: 60px 5%;
+    white-space: nowrap;
 }
 
 .sair {
@@ -126,10 +127,9 @@ body {
 .rightdiv1 {
   display: flex;
   flex-direction: column;
-
 }
 
-.rightdiv1 img {
+.bannerpicture {
   max-width: 100%;
   height: 150px;
 }
@@ -142,7 +142,7 @@ body {
   position: absolute;
   color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   flex-shrink: 0;
   box-shadow: inset 0 0 0 0 #ffffff;
   color: #ffffff;
@@ -170,18 +170,90 @@ body {
   display: none;
 }
 
-.user img {
-  width: 140px;
-  height: 140px;
+.profilepicture {
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 10px solid #ffffff;
+}
+
+.alterimg {
+  display: none;
+  position: absolute;
+  color: white;
+  top: 70px;
+  left: 34px;
+  cursor: pointer;
+}
+
+.profilepicture:hover + .alterimg{
+  display: flex;
+}
+
+.profilepicture:hover {
+  filter: brightness(50%);
+  scale: 1.06;
 }
 
 .user {
+  position: relative;
+  bottom: 40px;
   display: flex;
-  column-gap: 100px;
-  margin-top: 7em;
+  column-gap: 3em;
+  margin-left: 12em;
 }
 
 .usernames p {
+  font-weight: 300;
+  color: #7F7F7F;
+  margin: 0;
+  padding: 0;
+}
+
+.usernames h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
   color: rgb(0, 0, 0);
+}
+
+.usernames {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-form-inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12em;
+  row-gap: 4px;
+}
+
+.input {
+  color: #7F7F7F;
+  border-radius: 10px;
+  border: 2px solid #E7E7E7;
+  padding: 10px 10%;
+  padding-left: 16px;
+  margin-right: 30em; 
+}
+
+.inputbio {
+  color: #7F7F7F;
+  border-radius: 10px;
+  border: 2px solid #E7E7E7;
+  padding-top: 10px;
+  padding-left: 16px;
+  padding-bottom: 100px;
+  margin-right: 30em;
 }

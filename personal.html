@@ -10,6 +10,9 @@
 <body style="margin: 0;">
     <div class="container1">
 
+
+
+
         <!--Div da esquerda-->
         <!--Trocar cor dos icones das opções pra verde quando selecionadas(Nao sei fazer)-->
         <div class="leftdiv">
@@ -41,21 +44,60 @@
         </div>
 
         <img src="images/Line 19.svg" alt="">
+
+
+
+
+
+
         <!--Div da direita-->
         <div class="rightdiv1">
+
             <div class="banner">
                 <!--Tem que receber imagem do banco de dados aqui-->
-                <img src="images/banner.png" alt="">
-                <!--Redimensionar imagem e recortar para 1300px X 150px-->
+                <img class="bannerpicture" src="images/banner.png" alt="">
                 <a href="/">Editar capa</a>
             </div>
+
             <div class="user">
-                <img onclick="" src="images/profilepicture.png" alt="">
+                <!--Receber imagem do banco de dados aqui tbm-->
+                <!-- Clicar aqui chama a funçao para alterar foto de perfil-->
+                <img class="profilepicture" onclick="" src="images/profilepicture.png" alt="">
+                <div class="alterimg"><img class="changeprofilepicture" src="images/change.svg" alt="">Trocar foto</div>
                 <div class="usernames">
-                    <h>Nome do usuário</p>
-                    <p>@usuário</p>
+                    <h1>Nome do usuário(Nãounico)</h1>
+                    <p>@usuario(unico)</p>
                 </div>
             </div>
+            <form class="profileform" action="">
+
+                <div class="profile-form-inputs">
+                    <div class="user-input">
+                        <label for="username">Nome de usuário</label>
+                        <input type="username" class="input" name="username" placeholder="username do bd">
+                    </div>
+
+                    <div class="user-input">
+                        <label for="name">Nome</label>
+                        <input type="name" class="input" name="name" placeholder="name do bd">
+                    </div>
+                    <div class="user-input">
+                        <label for="bio">Bio</label>
+                        <input type="bio" class="inputbio" name="bio" placeholder="bio do bd">
+                    </div>
+
+                    <div class="user-input">
+                        <label for="email">Email</label>
+                        <input type="email" class="input" name="email" placeholder="email do bd">
+                    </div>
+
+                </div>
+
+                <div class="profile-form-buttons">
+
+                </div>
+
+            </form>
             
         </div>
 
