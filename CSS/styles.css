@@ -26,6 +26,10 @@
   font-weight: 400;
 }
 
+a {
+  cursor: pointer;
+}
+
 body {
   font-family: "GalakRound";
   text-decoration: none;
@@ -414,6 +418,7 @@ transform: scaleX(1);
 }
 
 .com1 {
+  cursor: pointer;
   width: 340px;
   height: 300;
   display: flex;
@@ -426,6 +431,13 @@ transform: scaleX(1);
   box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.10);
   margin-bottom: 12%;
   border-radius: 16px;
+}
+
+.com1:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: 0.8s ease;
 }
 
 .poster {
