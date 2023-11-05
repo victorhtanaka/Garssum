@@ -29,12 +29,10 @@
 * {
     font-family: "GalakRound";
     text-decoration: none;
-
 }
 
-.rightdiv {
-    background: black;
-    background-color: black;
+body {
+  overflow: hidden;
 }
 
 .container1 {
@@ -42,19 +40,19 @@
 }
 
 .alloptions {
-    row-gap: 2.2em;
+    row-gap: 1em;
     display: flex;
     flex-direction: column;
 }
 
-.op {
+.alloptions div {
     font-size: 14px;
     color: #B2B2B2;
     display: flex;
     column-gap: 12px;
 }
 
-.op:hover {
+.alloptions div:hover {
     cursor: pointer;
 }
 
@@ -77,4 +75,70 @@
     color: white;
     border-radius: 8px;
     background: linear-gradient(270deg, #EF6E5D -113.27%, #FE3B22 100%);
+}
+
+.op {
+  letter-spacing: 1px;
+}
+
+.p1 {
+  color: #26DD9B;
+}
+
+.p2 {
+  color: #B2B2B2;
+}
+
+.p3 {
+  color: #B2B2B2;
+}
+
+.p4 {
+  color: #B2B2B2;
+}
+
+.p5 {
+  color: #B2B2B2;
+}
+
+.op p {
+  position: relative;
+}
+
+.op p:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.op p::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #26DD9B;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.rightdiv1 {
+  display: none;
+}
+
+.rightdiv2 {
+  display: none;
+}
+
+.rightdiv3 {
+  display: none;
+}
+
+.rightdiv4 {
+  display: none;
+}
+
+.rightdiv5 {
+  display: none;
 }
