@@ -236,6 +236,7 @@
 }
 
 .input {
+  font-weight: 300;
   border-radius: 10px;
   border: 2px solid #E7E7E7;
   padding: 10px 10%;
@@ -245,6 +246,7 @@
 
 .inputbio {
   border-radius: 10px;
+  font-weight: 300;
   border: 2px solid #E7E7E7;
   padding-top: 10px;
   padding-left: 16px;
