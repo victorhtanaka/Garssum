@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 400;
+}
+
+* {
+    font-family: "GalakRound";
+    text-decoration: none;
+
+}
+
+.rightdiv {
+    background: black;
+    background-color: black;
+}
+
+.container1 {
+    display: flex;
+}
+
+.alloptions {
+    row-gap: 2.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.op {
+    font-size: 16px;
+    color: #B2B2B2;
+    display: flex;
+    column-gap: 12px;
+}
+
+.op:hover {
+    cursor: pointer;
+}
+
+.leftdiv {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7em;
+    padding: 70px 6%;
+}
+
+.sair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6px;
+    font-size: 16px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    background: linear-gradient(270deg, #EF6E5D -113.27%, #FE3B22 100%);
+}

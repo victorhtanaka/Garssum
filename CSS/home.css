@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 400;
+}
+
+* {
+    font-family: "GalakRound";
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    padding: 25px 10%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+  }
+
+.icons {
+  display: flex;
+  column-gap: 16px;
+}
+
+.multiselect {
+  width: 100%;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#mySelectOptions {
+  display: none;
+  border: 0.5px #7c7c7c solid;
+  background-color: #ffffff;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+#mySelectOptions label {
+  display: block;
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  background-color: #ffffff00;
+  padding: 0 2.25rem 0 .75rem;
+  /* padding: .375rem 2.25rem .375rem .75rem; */
+}
+
+#mySelectOptions label:hover {
+  background-color: #1e90ff;
+}
