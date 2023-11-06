@@ -8,6 +8,4 @@ function changeop(n) {
     document.getElementById(newpage).style.display = 'flex';
     currentop = parseInt(numero);
     document.getElementById(n).style.color = '#26DD9B';
-    console.log(n)
-    console.log(numero)
 }

@@ -295,6 +295,11 @@
 }
 
 .input2:hover {
-  box-shadow: inset 166px 0 0 0   #f84f39;
+  box-shadow: inset 166px 0 0 0 #f84f39;
   color: #ffffff;
+}
+
+.rightdiv2 img {
+  margin-left: 4em;
+  position: absolute;
 }
