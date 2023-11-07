@@ -336,8 +336,11 @@
 }
 
 .user-input2 input {
+  color: #4F4F4F;
   font-weight: 300;
   border-radius: 10px;
-  border: 2px solid #E7E7E7;
+  border-radius: 5px;
+  background: #F2F2F2;
+  border: none;
   padding: 10px 10%;
 }
