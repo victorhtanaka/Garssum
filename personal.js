@@ -8,4 +8,11 @@ function changeop(n) {
     document.getElementById(newpage).style.display = 'flex';
     currentop = parseInt(numero);
     document.getElementById(n).style.color = '#26DD9B';
+    console.log(currentop)
+}
+
+if (currentop !== 1) { 
+    document.getElementById("body1").style.overflow = "hidden";
+} else {
+    document.getElementById("body1").style.overflow = "scroll";
 }

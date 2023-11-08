@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/personal.css">
-    <script src="personal.js"></script>
+    <script src="personal.js" defer></script>
     <title>Configurações</title>
 </head>
-<body style="margin: 0;">
+<body id="body1">
     <div class="container1">
 
 
@@ -94,26 +94,28 @@
         </div>
 
         <div id="rightdiv2" class="rightdiv2">
-            <!--<img src="images/telafodaslaoq.svg" alt="">-->
+            <img src="images/telafodaslaoq.svg" alt="">
             <form id="reset-password-form" action="">
                 <div class="form2">
                     <h1>Alterar senha atual</h1>
 
                     <div class="user-input2">
                         <label for="current-password">Senha atual</label>
-                        <input type="current-password" class="input3" name="current-password" placeholder="Sua senha">
+                        <input type="current-password" name="current-password" placeholder="Sua senha">
                     </div>
 
                     <div class="user-input2">
                         <label for="new-password">Nova senha</label>
-                        <input type="new-password" class="input3" name="new-password" placeholder="Nova senha">
+                        <input type="new-password" name="new-password" placeholder="Nova senha">
                     </div>
 
                     <div class="user-input2">
                         <label for="repeat-new-password">Confirmar nova senha</label>
-                        <input type="repeat-new-password" class="input3" name="repeat-new-password" placeholder="Repita a nova senha">
+                        <input type="repeat-new-password" name="repeat-new-password" placeholder="Repita a nova senha">
                     </div>
+                    <a href="/">Salvar</a>
                 </div>
+                
 
             </form>
         </div>

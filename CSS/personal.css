@@ -26,6 +26,11 @@
   font-weight: 400;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 * {
     font-family: "GalakRound";
     text-decoration: none;
@@ -306,7 +311,6 @@
 }
 
 .rightdiv2 {
-  background-image: url('images/backgroundsvg.svg');
   display: none;
   justify-content: center;
   margin-left: 15em;
@@ -315,24 +319,28 @@
 .user-input2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  color: #4F4F4F;
 }
 
 .reset-password-form {
   align-items: center;
-  margin-left: 20em;
+  position: absolute;
 }
 
 .form2 {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 66%;
-  margin-left: 30%;
+  row-gap: 1em;
+  margin-left: 4em;
 }
 
 .form2 h1 {
   text-align: center;
+  white-space: nowrap;
+  color: #4F4F4F;
 }
 
 .user-input2 input {
@@ -342,5 +350,23 @@
   border-radius: 5px;
   background: #F2F2F2;
   border: none;
-  padding: 10px 10%;
+  padding: 14px 4%;
+}
+
+.form2 a {
+  font-weight: 200;
+  font-size: 16px;
+  padding: 10px 40%;
+  border-radius: 10px;
+  background: #26DD9B;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #26DD9B;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.form2 a:hover {
+  box-shadow: inset 290px 0 0 0 #74EE9B;
+  color: #ffffff;
 }
