@@ -53,20 +53,23 @@
     include("connection.php");
 
     session_start();
-    
     if (!isset($_SESSION["ID_usuario"])) {
         header("Location: index.php");
     }
-    $id = $_SESSION["ID_usuario"];
 
-    $sql = "SELECT ID_alimento AS id, nome, proteinas, gorduras, carboidratos, kcal, porcao FROM alimento WHERE fk_usuario_ID_usuario = (1 OR $id)";
+    $sql = "SELECT ID_alimento AS id, nome, proteinas, gorduras, carboidratos, kcal FROM alimento;";
     $sqlName = "SELECT ID_alimento AS id, nome FROM alimento";
     $result = $conn->query($sql);
     $resultName = $conn->query($sqlName);
-    $resultId = $conn->query($sql);
-    $nRows = $resultId->num_rows;
+    
+    
+    $id = $_GET["ID"];
     ?>
-
+    <?php
+    
+    
+    
+    ?>
     <a href="users_user.php?ID=<?php echo $id ?>">←</a> <br><br>
     Número de registros: <?php echo $result->num_rows?><br><br>
     <table class="allTable">
@@ -75,7 +78,7 @@
             <td class="dishTd">
                 <table class="dishTable">
                     <tr>
-                        <th class="dishHead1">Seu prato</th>
+                        <th class="dishHead1">Sua refeição</th>
                         <th class="dishHead2">Quantidade</th>
                     </tr>
                     <?php
@@ -87,18 +90,16 @@
             <input type="hidden" name="qtdArray" id="qtdArray">
             
 <?php
-            $buttonIndex = 0;
             while ($row = $resultName->fetch_assoc()) {
 ?> 
                     <tr>
                         <td class="dish1"><?php echo $row["nome"]?></td>
-                        <td class="dish2" id="<?php echo $buttonIndex . "txt"?>">0</td>
+                        <td class="dish2" id="<?php echo $row["id"] . "txt"?>">0</td>
                     </tr>
                     <?php
-            $buttonIndex += 1;
             }
             ?>
-            <tr><td class='dish2' colspan=2><button>Criar prato</button></td></tr>
+            <tr><td class='dish2' colspan=2><button>Registrar refeição</button></td></tr>
             </form>
             <?php
         } 
@@ -109,7 +110,7 @@
             <td class="infoTd">
                 <table class="infoTable">
         <tr>
-            <th>Adicionar ao prato</th>
+            <th>Adicionar à refeição</th>
             <th>Nome</th>
             <th>Calorias</th>
             <th>Carboidratos</th>
@@ -120,21 +121,19 @@
         </tr>
         <?php
         if ($result->num_rows > 0) {
-            $buttonIndex = 0;
             while ($row = $result->fetch_assoc()) {
 ?>          
             <tr>
-                <td class="infoAdd"><button id="<?php echo $buttonIndex?>" onclick="foodOnClick(<?php echo $buttonIndex?>,<?php echo $row['porcao']?>)">+</button></td>
-                <td class="info"><?php echo $row["nome"] . " (" . $row["porcao"] . "g)"?></td>
-                <td class="info"><?php echo $row["kcal"] * $row["porcao"]?>kcal</td>
-                <td class="info"><?php echo $row["carboidratos"] * $row["porcao"]?>g</td>
-                <td class="info"><?php echo $row["gorduras"] * $row["porcao"]?>g</td>
-                <td class="info"><?php echo $row["proteinas"] * $row["porcao"]?>g</td>
+                <td class="infoAdd"><button id="<?php echo $row["id"]?>" onclick="foodOnClick(<?php echo $row['id']?>)">+</button></td>
+                <td class="info"><?php echo $row["nome"]?></td>
+                <td class="info"><?php echo $row["kcal"]?>kcal</td>
+                <td class="info"><?php echo $row["carboidratos"]?>g</td>
+                <td class="info"><?php echo $row["gorduras"]?>g</td>
+                <td class="info"><?php echo $row["proteinas"]?>g</td>
                 <td class="info"><?php echo $row["id"]?></td>
                 
             </tr>
-<?php       
-            $buttonIndex += 1;
+<?php
             }
             
         } 
@@ -157,30 +156,16 @@
 
     let inputHid = document.getElementById('foodArray')
     let foodArray = []
-    <?php 
-    if ($resultId->num_rows > 0) {
-        while ($row = $resultId->fetch_assoc()) {
-    ?>
-    foodArray.push(<?php echo $row["id"] ?>)
-    <?php
-        }
-    }
-    ?>
     let inputHidQtd = document.getElementById('qtdArray')
     let qtdArray = []
-    
-    for (let i = 0; i < <?php echo $nRows?>; i++) {
-        qtdArray.push(0)
-    }
 
-    function foodOnClick(id,porcao) {
+    function foodOnClick(id) {
         let foodB = document.getElementById(id)
         let foodN = document.getElementById(id + "txt")
-        let nameInput = document.getElementById("foodArray")
-        let qtdInput = document.getElementById("qtdArray")
         changeColor(foodB)
-        addFoodN(foodN, porcao)
-        addFoodA(id, porcao, nameInput, qtdInput)
+        addFoodN(foodN)
+        addFoodA(id)
+        
     }
 
 
@@ -200,10 +185,15 @@
     }
 
 
-    function addFoodA(id, porcao, nameInput, qtdInput) {
-        qtdArray[id] += porcao
-        nameInput.value = foodArray
-        qtdInput.value = qtdArray
+    function addFoodA(id) {
+        if (!foodArray.includes(id)) {
+            foodArray.push(id)
+        }
+        inputHid.value = foodArray
+
+        
+        
+
     }
 
 </script>

@@ -8,7 +8,10 @@
 
     $name = $_POST["txtName"];
     $foodArrayStr = $_POST["foodArray"];
+    $qtdArrayStr = $_POST["qtdArray"];
     $foodArray = array_map('intval', explode(',', $foodArrayStr));
+    $qtdArray = array_map('intval', explode(',', $qtdArrayStr));
+
 
     $sql = "INSERT INTO prato (Nome) VALUES ('$name')";
     $result = $conn->query($sql);
