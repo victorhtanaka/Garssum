@@ -94,3 +94,35 @@ transform: scaleX(1);
     border-radius: 50%;
     border: 3px solid rgb(102, 241, 190);
 }
+
+.container {
+  display: flex;
+  padding: 2% 10%;
+}
+
+.leftdiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.row1 {
+  color: white;
+  display: flex;
+  border-radius: 30px;
+  background: linear-gradient(270deg, #74EE9B 0%, #26DD9B 100%);
+  align-items: center;
+  padding: 2px 10%;
+  font-size: 20px;
+}
+
+.row1 div {
+  margin: 0px;
+}
+
+.text1 {
+  font-weight: 200;
+}
+
+.text2 {
+  font-weight: 500;
+}
