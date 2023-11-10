@@ -97,6 +97,7 @@ transform: scaleX(1);
 
 .container {
   display: flex;
+  justify-content: space-between;
   padding: 2% 10%;
 }
 
@@ -111,8 +112,8 @@ transform: scaleX(1);
   border-radius: 30px;
   background: linear-gradient(270deg, #74EE9B 0%, #26DD9B 100%);
   align-items: center;
-  padding: 2px 10%;
-  font-size: 20px;
+  padding: 2% 9%;
+  font-size: 18px;
 }
 
 .row1 div {
@@ -125,4 +126,64 @@ transform: scaleX(1);
 
 .text2 {
   font-weight: 500;
+}
+
+.rightdiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-top-div {
+  border-radius: 30px;
+  border: 3px solid #26DD9B;
+}
+
+.right-bottom-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #26E39F;
+  filter: drop-shadow(0px 10px 100px rgba(33, 33, 33, 0.10));
+}
+
+.top-info div {
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: 
+    linear-gradient(to right, rgba(67, 235, 175), rgba(67, 235, 175)), 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0) , rgb(255, 255, 255)); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+
+  padding: 30px 34px;
+  background-color: #43EBAF;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-info {
+  display: flex;
+}
+
+.bottom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom-info div {
+  font-size: 16px;
+  color: white;
+  padding: 6%;
+  text-align: center;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: 
+    linear-gradient(to right, rgba(67, 235, 175), rgba(67, 235, 175)), 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0) , rgb(255, 255, 255)); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-color: #43EBAF;
 }
