@@ -112,6 +112,7 @@ button {
     flex-direction: row;
     gap: 3px;
 }
+
 .legendaProt {
     display: flex;
     justify-content: center;
@@ -253,6 +254,7 @@ button {
 .day + #currentDay {
     background-color:#e8f4fa;
 }
+
 .event {
     font-size: 10px;
     padding: 3px;
@@ -278,28 +280,35 @@ button {
     border-radius: 5px;
     width: 800px;
     height: 500px;
-    /* top: 100px;
-    left: 25%; */
     font-family: sans-serif;
 }
 
 .top-part {
     display: flex;
     background-color: #58bae4;
+    height: 200px;
 }
 
 .leftModal-container {
-    width: 100px;
-    background-color: #ff9b9b;
-}
-.rightModal-container {
-    width: 100px;
+    width: 30%;
     background-color: #ff9b9b;
 }
 
+.rightModal-container {
+    width: 70%;
+    background-color: #c69bff;
+    display: flex;
+    flex-direction: column;
+}
+
 #closeModal-btn {
+    z-index: 15;
+    position: absolute;
+    right: 10px;
+    top: 10px;
     background-color: #db3939;
     width: 30px;
+    cursor: pointer;
 }
 
 #close-div {
@@ -309,8 +318,6 @@ button {
 
 #modalBackDrop {
     display: none;
-    top: 0px;
-    left: 0px;
     z-index: 10;
     width: 100vw;
     height: 100vh;
@@ -325,14 +332,17 @@ button {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background-color: #43b35f;
-    height: 100px;
+    /* background-color: #43b35f; */
+    height: 100%;
+    width: 100%;
 }
 
 .search-box {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     text-align: left;
 }
 
@@ -351,7 +361,7 @@ button {
 }
 
 #search-bar {
-    width: 100%;
+    width: 400px;
     height: 40px;
     font-size: 18px;
     border-radius: 20px;
@@ -402,9 +412,11 @@ button {
 
 .kanban {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 10px;
     width: 100%;
+    max-height: 240px;
+    height: 100%;
 }
 
 .board {
@@ -412,19 +424,36 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3) inset;
     width: 100%;
     min-height: 100%;
     border-radius: 5px;
 }
 
 .item {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    padding: 10px;
+    /* padding: 10px; */
+    gap: 10px;
+    border: 3px solid #41b365;
     border-radius: 5px;
-    width: 120px;
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.item button {
+    display: flex;
+    /* align-self: baseline; */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    color: #41b365;
+    width: 30px;
     height: 30px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }

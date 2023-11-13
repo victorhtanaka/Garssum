@@ -70,29 +70,28 @@
     </div>
 
     <div id="newRefeicaoModal">
-        <div id="close-div">
-            <button id="closeModal-btn" onclick="closeModal()">X</button>
-        </div>
+        <button id="closeModal-btn" onclick="closeModal()">X</button>
+
         <div class="top-part">
             <div class="leftModal-container">
                 SELECIONE UM HORÁRIO
             </div>
             <div class="rightModal-container">
-                
-                <h2>Nova Refeição</h2>
                 <div class="container2">
-                    <div class="search-box">
-                        <input type="text" name="user_query" id="search-bar" placeholder="Pesquisar alimento..." autocomplete="off">
-                        <div class="filter">
-                            <ul class="options"></ul>
-                        </div>
-                    </div>
+                    <h2>Nova Refeição</h2>
                 </div>
             </div>
         </div>
 
         <div class="kanban">
+            <div class="search-box">
+                <input type="text" name="user_query" id="search-bar" placeholder="Pesquisar alimento..." autocomplete="off">
+                </div>
             <div class="board">
+                <div class="item" draggable="true">
+                    <p>Penis gordo</p>
+                    <button onclick="addAlimento()">+</button>
+                </div>
             </div>
         </div>
     </div>

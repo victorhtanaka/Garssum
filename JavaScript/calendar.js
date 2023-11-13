@@ -266,3 +266,7 @@ function getNewPosition(column, posX) {
 
     return result;
 }
+
+function addAlimento() {
+    
+}
