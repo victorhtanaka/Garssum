@@ -26,6 +26,11 @@
   font-weight: 400;
 }
 
+html {
+  overflow: hidden;
+}
+
+
 * {
     font-family: "GalakRound";
     text-decoration: none;
@@ -42,24 +47,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 300;
+  font-weight: 200;
   padding: 18px 10%;
   background-color: #26DD9B;
+  font-size: 14px;
 }
 
 .nav__links a,
 .cta,
 .overlay__content a {
-    font-size: 14;
-    font-weight: 300;
     color: #ffffff;
     text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 .nav__links {
   list-style: none;
   display: flex;
-  column-gap: 40px;
+  column-gap: 10px;
 }
 
 .nav__links li {
@@ -70,22 +78,9 @@ header {
   position: relative;
 }
 
-.nav__links li a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  bottom: -4px;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .3s ease-in-out;
-}
-
-.nav__links li a:hover::before {
-transform-origin: left;
-transform: scaleX(1);
+.nav__links a:hover {
+  box-shadow: inset 160px 0 0 0 #ffffff;
+  color: #26DD9B;
 }
 
 .profilepicture {
@@ -139,8 +134,23 @@ transform: scaleX(1);
 }
 
 .rightdiv {
+  justify-content: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.right-top-div img {
+  width: 124px;
+  border-radius: 50%;
+  margin-top: 1.4em;
+  border: 8px solid rgb(102, 241, 190);
+}
+
+.right-top-div p {
+  color: #515151;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 .right-top-div {
@@ -156,6 +166,7 @@ transform: scaleX(1);
   padding: 2em;
   border-radius: 30px;
   row-gap: 1em;
+  margin-bottom: 1.8em;
 }
 
 .top-info div {
@@ -166,7 +177,6 @@ transform: scaleX(1);
     linear-gradient(to bottom, rgba(255, 0, 0, 0) , rgb(255, 255, 255)); 
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-
   padding: 18px 40px;
   background-color: #43EBAF;
   color: white;
@@ -187,15 +197,14 @@ transform: scaleX(1);
 }
 
 .top-info div {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  row-gap: 1.4em;
+  row-gap: 0.4em;
   white-space: nowrap;
 }
 
 .top-info-p {
-  margin-top: 33px;
-  position: absolute;
   font-size: 14px;
   font-weight: 200;
 }
@@ -229,6 +238,9 @@ transform: scaleX(1);
 }
 
 .row2 div {
+  cursor: pointer;
+  font-size: 22px;
+  column-gap: 1em;
   flex: 1;
   padding: 1em 1em;
   display: flex;
@@ -251,8 +263,8 @@ transform: scaleX(1);
 }
 
 .row3 div {
+  cursor: pointer;
   flex: 1;
-  margin-bottom: 100px;
   text-align: center;
   padding: 26px 40px;
   border: 3px solid transparent;
