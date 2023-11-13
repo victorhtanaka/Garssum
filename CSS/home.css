@@ -105,6 +105,10 @@ transform: scaleX(1);
 .leftdiv {
   display: flex;
   flex-direction: column;
+  row-gap: 1.8em;
+  color: #515151;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 .row1 {
@@ -162,6 +166,7 @@ transform: scaleX(1);
     linear-gradient(to bottom, rgba(255, 0, 0, 0) , rgb(255, 255, 255)); 
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
+
   padding: 18px 40px;
   background-color: #43EBAF;
   color: white;
@@ -220,10 +225,12 @@ transform: scaleX(1);
 .row2 {
   display: flex;
   justify-content: center;
-  column-gap: 4em;
+  column-gap: 1.4em;
 }
 
 .row2 div {
+  flex: 1;
+  padding: 1em 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,15 +246,15 @@ transform: scaleX(1);
 
 .row3 {
   display: flex;
-  justify-content: center;
-  column-gap: 2em;
+  justify-content: space-around;
+  column-gap: 1.4em;
 }
 
 .row3 div {
+  flex: 1;
   margin-bottom: 100px;
   text-align: center;
   padding: 26px 40px;
-  position: absolute;
   border: 3px solid transparent;
   border-radius: 20px;
   background: 
@@ -258,8 +265,4 @@ transform: scaleX(1);
   background-color: #ffffff;
   row-gap: 12px;
   justify-content: space-around;
-}
-
-.row3 div img {
-  position: absolute;
 }
