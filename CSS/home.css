@@ -97,8 +97,9 @@ transform: scaleX(1);
 
 .container {
   display: flex;
-  justify-content: space-between;
-  padding: 2% 10%;
+  justify-content: center;
+  margin-top: 2%;
+  column-gap: 40px;
 }
 
 .leftdiv {
@@ -116,12 +117,17 @@ transform: scaleX(1);
   font-size: 18px;
 }
 
+.rowimg {
+  margin-left: 40%;
+}
+
 .row1 div {
   margin: 0px;
 }
 
 .text1 {
   font-weight: 200;
+  margin-right: 4em;
 }
 
 .text2 {
@@ -143,6 +149,9 @@ transform: scaleX(1);
   flex-direction: column;
   background-color: #26E39F;
   filter: drop-shadow(0px 10px 100px rgba(33, 33, 33, 0.10));
+  padding: 2em;
+  border-radius: 30px;
+  row-gap: 1em;
 }
 
 .top-info div {
@@ -154,29 +163,50 @@ transform: scaleX(1);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
 
-  padding: 30px 34px;
+  padding: 18px 26px;
   background-color: #43EBAF;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.kilo {
+  font-size: 24px;
 }
 
 .top-info {
   display: flex;
+  column-gap: 1em;
+}
+
+.top-info div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4em;
+  white-space: nowrap;
+}
+
+.top-info-p {
+  margin-top: 33px;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 200;
 }
 
 .bottom-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  row-gap: 1em;
 }
 
 .bottom-info div {
   font-size: 16px;
   color: white;
-  padding: 6%;
+  padding: 4%;
   text-align: center;
   border: 3px solid transparent;
   border-radius: 12px;
