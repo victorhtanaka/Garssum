@@ -1,0 +1,434 @@
+body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: #FFFCFF;
+}
+button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    row-gap: 50px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #c6ffd8;
+    width: 1000px;
+    max-height: 550px;
+}
+
+.information {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    border-radius: 0px 20px 20px 0;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    background-color: #fff;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.calories {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #13322B;
+}
+
+.nutrients {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.carbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #58bae4;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.proteinas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #e45858;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gorduras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(236, 213, 0);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.legenda {
+    display: flex;
+    margin-top: 90px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.legendaCarbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+}
+.legendaProt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+}
+.legendaGord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+}
+
+#c-circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #58bae4;
+}
+#p-circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #e45858;
+}
+#g-circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: rgb(236, 213, 0);
+}
+
+.cal-icon img{
+    height: 60px;
+}
+
+.cal-icon {
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.cal-count {
+    margin-top: 20px;
+}
+
+.calories p {
+    margin: 0;
+}
+
+#month {
+    margin-top: 18px;
+    margin-left: 12px;
+    font-size: 30px;
+    height: 40px;
+    color: #13322B
+}
+
+#dayDate {
+    margin: 15px;
+    display: flex;
+    background-color: #74EE9B;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px 0 15px 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#header {
+    padding: 10px;
+    color: #13322B;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    }
+#header button {
+    background-color:#41b365;
+    }
+#calendar-container {
+    width: 650px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 0 0;
+    }
+#weekdays {
+    margin: auto;
+    /* width: 100%; */
+    display: flex;
+    padding: 0 10px;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    color: #13322B;
+    background-color: #5a5e5b;
+}
+#weekdays div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    padding: 7px;
+    gap: 5px;
+    background-color: #43b35f;
+}
+
+#calendar-days {
+    min-width: 630px;
+    max-width: 630px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: 80px;
+    padding: 7px;
+    height: 60px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.day:hover {
+    background-color: #e8faed;
+}
+
+.day + #currentDay {
+    background-color:#e8f4fa;
+}
+.event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #58bae4;
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+}
+.padding {
+    cursor: default !important;
+    background-color: #FFFCFF !important;
+    box-shadow: none !important;
+}
+
+#newRefeicaoModal {
+    position: absolute;
+    display: none;
+    z-index: 20;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 800px;
+    height: 500px;
+    /* top: 100px;
+    left: 25%; */
+    font-family: sans-serif;
+}
+
+.top-part {
+    display: flex;
+    background-color: #58bae4;
+}
+
+.leftModal-container {
+    width: 100px;
+    background-color: #ff9b9b;
+}
+.rightModal-container {
+    width: 100px;
+    background-color: #ff9b9b;
+}
+
+#closeModal-btn {
+    background-color: #db3939;
+    width: 30px;
+}
+
+#close-div {
+    display: flex;
+    justify-content: right;
+}
+
+#modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* -----------------------------SEARCH ENGINE----------------------------- */
+
+.container2 {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #43b35f;
+    height: 100px;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    text-align: left;
+}
+
+.filter {
+    display: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.filter.active {
+    position: relative;
+    display: block;
+    text-align: left;
+}
+
+#search-bar {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: #F2F2F2;
+}
+
+#search-bar::placeholder {
+    opacity: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+#search-bar:focus {
+    outline: none;
+}
+
+#search-bar:focus::placeholder {
+    color: transparent;
+}
+
+.options li {
+    height: 20px;
+    background: linear-gradient(to top, #ebebeb 50%, #fff 100%);
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+}
+
+.options {
+    /* list-style-type: none; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options li:hover {
+    background-color: #eeeeee;
+}
+
+.options p {
+    background-color: #fff;
+}
+
+/* -----------------------------DRAG & DROP----------------------------- */
+
+.kanban {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3) inset;
+    width: 100%;
+    min-height: 100%;
+    border-radius: 5px;
+}
+
+.item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dragging {
+    opacity: 0.5;
+}
