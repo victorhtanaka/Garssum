@@ -30,16 +30,11 @@ html {
   overflow: hidden;
 }
 
-
 * {
     font-family: "GalakRound";
     text-decoration: none;
     margin: 0;
     padding: 0;
-}
-
-a {
-    cursor: pointer;
 }
 
 header {
@@ -48,7 +43,7 @@ header {
   justify-content: space-between;
   align-items: center;
   font-weight: 200;
-  padding: 18px 10%;
+  padding: 22px 10%;
   background-color: #26DD9B;
   font-size: 14px;
 }
@@ -84,10 +79,8 @@ header {
 }
 
 .profilepicture {
-    width: 4%;
+    width: 3.4%;
     cursor: pointer;
-    border-radius: 50%;
-    border: 3px solid rgb(102, 241, 190);
 }
 
 .container {
@@ -100,10 +93,12 @@ header {
 .leftdiv {
   display: flex;
   flex-direction: column;
-  row-gap: 1.8em;
+  row-gap: 1.4em;
   color: #515151;
   font-weight: 300;
   font-size: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .row1 {
@@ -166,7 +161,7 @@ header {
   padding: 2em;
   border-radius: 30px;
   row-gap: 1em;
-  margin-bottom: 1.8em;
+
 }
 
 .top-info div {
@@ -237,10 +232,10 @@ header {
   column-gap: 1.4em;
 }
 
-.row2 div {
+.row2 a {
   cursor: pointer;
   font-size: 22px;
-  column-gap: 1em;
+  column-gap: 1.4em;
   flex: 1;
   padding: 1em 1em;
   display: flex;
@@ -254,6 +249,14 @@ header {
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   background-color: #ffffff;
+  transition: 0.8s ease;
+}
+
+.row2 a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.6s ease;
 }
 
 .row3 {
@@ -262,7 +265,7 @@ header {
   column-gap: 1.4em;
 }
 
-.row3 div {
+.row3 a {
   cursor: pointer;
   flex: 1;
   text-align: center;
@@ -277,4 +280,12 @@ header {
   background-color: #ffffff;
   row-gap: 12px;
   justify-content: space-around;
+  transition: 0.8s ease;
+}
+
+.row3 a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.6s ease;
 }
