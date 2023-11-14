@@ -93,9 +93,6 @@ header {
     cursor: pointer;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+.container1 {
   margin-top: 2%;
-  column-gap: 40px;
 }
