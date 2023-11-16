@@ -82,6 +82,10 @@ header {
     cursor: pointer;
 }
 
+.gohome {
+  cursor: pointer;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -114,6 +118,7 @@ body {
 }
 
 .leftdiv {
+  margin-top: 2em;
     display: flex;
     flex-direction: column;
     row-gap: 6em;
@@ -134,6 +139,7 @@ body {
     border-radius: 8px;
     background: linear-gradient(270deg, #EF6E5D -113.27%, #FE3B22 100%);
 }
+
 
 .op {
   letter-spacing: 1px;
@@ -187,28 +193,74 @@ body {
 }
 
 .bannerpicture {
-  max-width: 100%;
+  width: 1500px;
   height: 150px;
+  max-width: 100%;
 }
 
-.rightdiv1 a {
+.bannerinput {
+  display: none;
+}
+
+.pictureinput {
+  display: none;
+}
+
+.profilelabel {
+  cursor: pointer;
+  left: 36.5%;
+  top: 17.5%;
+  font-size: 13px;
+  position: absolute;
+  border: 1px solid #ffffff;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  color: #ffffff;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.bannerlabel {
+  cursor: pointer;
   left: 70%;
   top: 12%;
   padding: 12px 2.6%;
   font-size: 13px;
   position: absolute;
-  color: #ffffff;
   border-radius: 10px;
   border: 1px solid #ffffff;
   flex-shrink: 0;
   box-shadow: inset 0 0 0 0 #ffffff;
   color: #ffffff;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-} 
+}
 
-.rightdiv1 a:hover {
+.back p {
+  margin: 0px;
+}
+
+.back {
+  top: 20px;
+  padding: 6px 22px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #b5b5b5;
+  border-radius: 30px;
+  color: black;
+  column-gap: 8px;
+  font-size: 18px;
+}
+
+.bannerlabel:hover {
   box-shadow: inset 166px 0 0 0 #ffffff;
   color: #26DD9B;
+}
+
+.profilelabel:hover {
+  box-shadow: inset 166px 0 0 0 #00000064;
 }
 
 .rightdiv2 {
@@ -232,20 +284,10 @@ body {
   height: 150px;
   border-radius: 100%;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
   border: 10px solid #ffffff;
 }
 
-.alterimg {
-  display: none;
-  position: absolute;
-  color: white;
-  top: 70px;
-  left: 34px;
-  cursor: pointer;
-}
-
-.profilepicture:hover + .alterimg{
+.profilepicture:hover + .profilelabel{
   display: flex;
 }
 

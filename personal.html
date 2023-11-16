@@ -9,24 +9,15 @@
 </head>
 <body id="body1">
     <div class="container1">
-        <header>
-            <a href="../home.html"><img src="images/logo.svg" alt="logo"></a>
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="graph.html">Gráfico</a></li>
-                    <li><a href="">Nova Refeição</a></li>
-                    <li><a href="">Calendário</a></li>
-                    <li><a href="">Higher or Lower</a></li>
-                    <li><a href="">Meus Pratos</a></li>
-                </ul>
-            </nav>
-            <img class="profilepicture" src="images/Vector (1).svg" alt="">
-        </header>
 
         <!--Div da esquerda-->
         <!--Trocar cor dos icones das opções pra verde quando selecionadas(Nao sei fazer)-->
         <div class="leftdiv">
-            <img src="images/logogreen.svg" alt="">
+            <a class="back" href="home.html">
+                <img src="images/arrow.svg" alt="">
+                <p>Voltar</p>
+            </a>
+            <img class="imghome" src="images/logogreen.svg" alt="">
 
             <div class="alloptions">
                 <div class="op" onclick="changeop('p1')">
@@ -61,20 +52,25 @@
         <div id="rightdiv1" class="rightdiv1">
             <div class="banner">
                 <!--Tem que receber imagem do banco de dados aqui-->
-                <img class="bannerpicture" src="images/banner.png" alt="">
-                <a href="/">Editar capa</a>
+                <img class="bannerpicture" id="bannerImg" src="images/banner.png" alt="">
             </div>
             <div class="user">
-                <!--Receber imagem do banco de dados aqui tbm-->
-                <!-- Clicar aqui chama a funçao para alterar foto de perfil-->
-                <img class="profilepicture" onclick="" src="images/profilepicture.png" alt="">
-                <div class="alterimg"><img class="changeprofilepicture" src="images/change.svg" alt="">Trocar foto</div>
+                
+                <img class="profilepicture" id="profileImg  " src="images/profilepicture.png" alt="">
                 <div class="usernames">
                     <h1>Nome do usuário(Nãounico)</h1>
                     <p>@usuario(unico)</p>
                 </div>
             </div>
             <form class="profileform" action="">
+                <label class="profilelabel" for="pictureinput"></label>
+                <input class="pictureinput" type="file" name="pictureinput" id="pictureinput" accept="image/png, image/jpeg, 
+                image/jpg" onChange="readURL1(this);"/>
+
+                <label class="bannerlabel" for="bannerinput">Editar capa</label>
+                <input class="bannerinput" type="file" name="bannerinput" id="bannerinput" accept="image/png, 
+                image/jpeg, image/jpg" onChange="readURL(this);"/>
+
                 <div class="profile-form-inputs">
                     <div class="user-input">
                         <label for="username">Nome de usuário</label>

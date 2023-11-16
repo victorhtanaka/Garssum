@@ -16,3 +16,30 @@ if (currentop !== 1) {
 } else {
     document.getElementById("body1").style.overflow = "scroll";
 }
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+  
+      reader.onload = function (e) {
+        const bannerImg = document.getElementById('bannerImg');
+        bannerImg.src = e.target.result;
+      };
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  
+  function readURL1(input) {
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+  
+      reader.onload = function (e) {
+        const bannerImg = document.getElementById('profileImg');
+        bannerImg.src = e.target.result;
+      };
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  
