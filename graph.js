@@ -1,11 +1,21 @@
-const xValues = [100,200,300,400,500,600,700,800,900,1000];
+const d = new Date();
+let currmonth = d.getMonth();
+
+console.log(currmonth)
+if (currmonth <= 5) {
+    var xValues = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'];
+} else {
+    xValues = ['Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+}
+
+
         
 new Chart("myChart", {
     type: "line",
     data: {
     labels: xValues,
     datasets: [{ 
-        data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+        data: [1600,1700,7000,1900,1900,1000],
         borderColor: "#3DD598",
         radius: 4,
         hoverBorderWidth: 3,
@@ -14,7 +24,7 @@ new Chart("myChart", {
         pointBorderColor: "#3DD598",
         fill: false
     }, { 
-        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+        data: [1600,1700,1700,900,900,1700],
         borderColor: "#74EE9B",
         radius: 4,
         hoverBorderWidth: 3,
@@ -23,7 +33,7 @@ new Chart("myChart", {
         pointBorderColor: "#74EE9B",
         fill: false
     }, { 
-        data: [8000, 7700,7800, 7500, 7000, 7200, 7300, 7000, 6500, 6000],
+        data: [3000, 2700,2800, 2500, 2000, 2200],
         borderColor: "#84ECBF",
         radius: 4,
         hoverBorderWidth: 3,
