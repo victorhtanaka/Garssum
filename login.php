@@ -5,6 +5,9 @@
         <link rel="stylesheet" type="text/css" href="../CSS/login.css">
     </head>
     <body>
+        <?php
+            include("connection.php");
+        ?>
         <div class="main-container">
             <div class="banner-div">
                 <img src="../assets/ilustração.png" alt="">
