@@ -35,8 +35,8 @@ function readURL(input) {
       const reader = new FileReader();
   
       reader.onload = function (e) {
-        const bannerImg = document.getElementById('profileImg');
-        bannerImg.src = e.target.result;
+        const profileImg = document.getElementById('profileImg');
+        profileImg.src = e.target.result;
       };
   
       reader.readAsDataURL(input.files[0]);

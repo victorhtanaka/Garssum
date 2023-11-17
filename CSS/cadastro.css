@@ -27,6 +27,7 @@
 }
 
 * {
+    color: #313131;
     font-family: "GalakRound";
     text-decoration: none;
     margin: 0;
@@ -79,21 +80,22 @@
 }
 
 .log-status a {
-    color: #000000;
+    color: #282828;
     text-decoration: none;
     background-color: #ffffff;
     font-size: 18px;
 }
 
 .cad-status a {
-    color: #000000;
+    color: #282828;
     text-decoration: none;
     background-color: #ffffff;
     font-size: 18px;
 }
 
 .input-box input {
-    height: 30px;
+    color: #565656;
+    height: 3.2em;
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -107,25 +109,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    row-gap: 4px;
+    row-gap: 2px;
 }
 
-#cadastrar-btn {
-    margin: 0;
-    background: #26DD9B;
-    background: linear-gradient(to right, #26DD9B, #74EE9B );
-    color: #fff;
-    border: none;
-    height: 60px;
-    width: 130px;
-    border-radius: 5px;
-}
-
-#cadastrar-btn:hover {
-    background: #ffffff;
-    color: #26DD9B;
-    border: 2px solid #26DD9B;
-}
 
 .input:focus{
     outline-width: 0;
@@ -133,7 +119,6 @@
     border-color: #26DD9B;
     border-style: solid;
 }
-
 
 .input:focus::placeholder {
     color: transparent;
@@ -160,6 +145,7 @@
     padding: 10px 20px;
     text-align: center;
     width: 40%;
+    border-radius: 12px;
     border: none;
     color: white;
     background-color: #26DD9B;
