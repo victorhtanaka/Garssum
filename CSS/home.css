@@ -1,93 +1,280 @@
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-Light.otf') format("opentype");
   font-style: normal;    
   font-weight: 300;
 }
 
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-Medium.otf') format("opentype");
   font-style: normal;    
   font-weight: 500;
 }
 
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-GalakProThin.otf') format("opentype");
   font-style: normal;    
   font-weight: 200;
 }
 
 @font-face {
   font-family: "GalakRound";
-  src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  src: url('../GalakRound/GalakRound-GalakProRegular.otf') format("opentype");
   font-style: normal;    
   font-weight: 400;
 }
 
+html {
+  overflow: hidden;
+}
+
+
 * {
     font-family: "GalakRound";
     text-decoration: none;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+a {
+    cursor: pointer;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 300;
-    padding: 25px 10%;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
-  }
-
-.icons {
+  font-family: "GalakRound";
   display: flex;
-  column-gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 200;
+  padding: 18px 10%;
+  background-color: #26DD9B;
+  font-size: 14px;
 }
 
-.multiselect {
-  width: 100%;
+.nav__links a,
+.cta,
+.overlay__content a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.selectBox {
+.nav__links {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
   position: relative;
 }
 
-.selectBox select {
-  width: 100%;
+.nav__links a:hover {
+  box-shadow: inset 160px 0 0 0 #ffffff;
+  color: #26DD9B;
 }
 
-.overSelect {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.profilepicture {
+    width: 4%;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid rgb(102, 241, 190);
 }
 
-#mySelectOptions {
-  display: none;
-  border: 0.5px #7c7c7c solid;
-  background-color: #ffffff;
-  max-height: 150px;
-  overflow-y: scroll;
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  column-gap: 40px;
 }
 
-#mySelectOptions label {
-  display: block;
-  font-weight: normal;
-  display: block;
+.leftdiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8em;
+  color: #515151;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.row1 {
+  color: white;
+  display: flex;
+  border-radius: 30px;
+  background: linear-gradient(270deg, #74EE9B 0%, #26DD9B 100%);
+  align-items: center;
+  padding: 2% 9%;
+  font-size: 18px;
+}
+
+.rowimg {
+  margin-left: 40%;
+}
+
+.row1 div {
+  margin: 0px;
+}
+
+.text1 {
+  font-weight: 200;
+  margin-right: 4em;
+}
+
+.text2 {
+  font-weight: 500;
+}
+
+.rightdiv {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.right-top-div img {
+  width: 124px;
+  border-radius: 50%;
+  margin-top: 1.4em;
+  border: 8px solid rgb(102, 241, 190);
+}
+
+.right-top-div p {
+  color: #515151;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.right-top-div {
+  border-radius: 30px;
+  border: 3px solid #26DD9B;
+}
+
+.right-bottom-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #26E39F;
+  filter: drop-shadow(0px 10px 100px rgba(33, 33, 33, 0.10));
+  padding: 2em;
+  border-radius: 30px;
+  row-gap: 1em;
+  margin-bottom: 1.8em;
+}
+
+.top-info div {
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: 
+    linear-gradient(to right, rgba(67, 235, 175), rgba(67, 235, 175)), 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0) , rgb(255, 255, 255)); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  padding: 18px 40px;
+  background-color: #43EBAF;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kilo {
+  font-size: 24px;
+}
+
+.top-info {
+  display: flex;
+  column-gap: 1em;
+}
+
+.top-info div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4em;
   white-space: nowrap;
-  min-height: 1.2em;
-  background-color: #ffffff00;
-  padding: 0 2.25rem 0 .75rem;
-  /* padding: .375rem 2.25rem .375rem .75rem; */
 }
 
-#mySelectOptions label:hover {
-  background-color: #1e90ff;
+.top-info-p {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.bottom-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1em;
+}
+
+.bottom-info div {
+  font-size: 16px;
+  color: white;
+  padding: 4%;
+  text-align: center;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background: 
+    linear-gradient(to right, rgba(67, 235, 175), rgba(67, 235, 175)), 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0) , rgb(255, 255, 255)); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-color: #43EBAF;
+}
+
+.row2 {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.4em;
+}
+
+.row2 div {
+  cursor: pointer;
+  font-size: 22px;
+  column-gap: 1em;
+  flex: 1;
+  padding: 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  background: 
+    linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)), 
+    linear-gradient(to left, #26DD9B , #74EE9B); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-color: #ffffff;
+}
+
+.row3 {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 1.4em;
+}
+
+.row3 div {
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  padding: 26px 40px;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  background: 
+    linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)), 
+    linear-gradient(to left, #26DD9B , #74EE9B); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-color: #ffffff;
+  row-gap: 12px;
+  justify-content: space-around;
 }

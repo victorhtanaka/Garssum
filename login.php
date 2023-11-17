@@ -9,12 +9,12 @@
         ?>
         <div class="main-container">
             <div class="banner-div">
-                <img src="assets/ilustração.jpg" alt="">
+                <img src="images/illu1.svg" alt="">
             </div>
             <div class="register-div">
                 <div class="formulario">
-                    <h1>Seja
-                    bem-vindo!</h1>
+                    <h1 class="h1">Seja
+                    Bem-Vindo!</h1>
                     <br>
                     <div class="status">
                         <div class="log-status">

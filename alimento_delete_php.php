@@ -6,13 +6,18 @@
         header("Location: index.php");
     }
 
-    $id = $_POST["hidId"];
+    $id = $_POST["idAlimento"];
 
-    $sql = "DELETE FROM usuario WHERE ID_usuario = $id";
+    $sql = "DELETE FROM alimento WHERE ID_alimento = $id";
     $result = $conn->query($sql);
 
     if ($result === TRUE){
-        header("Location: users_lst.php");
+        ?>
+        <script>
+            alert("Alimento deletado com sucesso")
+            window.location = "alimento_list.php";
+        </script>
+        <?php
     }
     else {
         echo "Algo deu errado...";

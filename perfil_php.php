@@ -1,17 +1,26 @@
 <?php 
     include("connection.php");
 
-    $id = $_GET["ID"];
+    session_start();
+    
+    if (!isset($_SESSION["ID_usuario"])) {
+        header("Location: index.php");
+    }
+    $id = $_SESSION["ID_usuario"];
 
     $name = $_POST["name"];
     $bio = $_POST["bio"];
 
-    $sql = "UPDATE usuario SET nome = '$name', bio = '$bio' WHERE ID_usuario = $id";
+    
+    $img_banner = addslashes(file_get_contents($_FILES["img_banner"]["tmp_name"]));
+    $img_perfil = addslashes(file_get_contents($_FILES["Imagem"]["tmp_name"]));
+
+
+    $sql = "UPDATE usuario SET nome = '$name', bio = '$bio', img = '$img_perfil', banner_img = '$img_banner' WHERE ID_usuario = $id";
     $result = $conn->query($sql);
 
     if ($result === TRUE){
-        session_start();
-        header('Location: perfil.php?ID=' . $_SESSION["ID_usuario"]);
+        header('Location: perfil.php');
     }
     else {
         echo "Algo deu errado...";

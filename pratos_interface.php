@@ -46,6 +46,10 @@
         .dishHead{
             text-align: center;
         }
+        .imgAlimento {
+            height: 40px;
+            width: auto;
+        }
     </style>
 </head>
 <body>
@@ -59,16 +63,18 @@
     }
     $id = $_SESSION["ID_usuario"];
 
-    $sql = "SELECT ID_alimento AS id, nome, proteinas, gorduras, carboidratos, kcal, porcao FROM alimento WHERE fk_usuario_ID_usuario = (1 OR $id)";
-    $sqlName = "SELECT ID_alimento AS id, nome FROM alimento";
+    $sql = "SELECT ID_alimento AS id, nome, proteinas, gorduras, carboidratos, kcal, porcao, img FROM alimento WHERE fk_usuario_ID_usuario = 1 OR $id";
+    $sqlName = "SELECT ID_alimento AS id, nome FROM alimento WHERE fk_usuario_ID_usuario = 1 OR $id";
     $result = $conn->query($sql);
     $resultName = $conn->query($sqlName);
     $resultId = $conn->query($sql);
     $nRows = $resultId->num_rows;
     ?>
 
-    <a href="users_user.php?ID=<?php echo $id ?>">←</a> <br><br>
+    <a href="home.php">←</a> <br><br>
     Número de registros: <?php echo $result->num_rows?><br><br>
+    <a href="alimento_list.php">Editar alimentos</a> <br><br>
+    <?php echo $id ?>
     <table class="allTable">
         <tr>
             
@@ -76,7 +82,7 @@
                 <table class="dishTable">
                     <tr>
                         <th class="dishHead1">Seu prato</th>
-                        <th class="dishHead2">Quantidade</th>
+                        <th class="dishHead2">Quantidade (g)</th>
                     </tr>
                     <?php
         if ($resultName->num_rows > 0) {
@@ -130,7 +136,7 @@
                 <td class="info"><?php echo $row["carboidratos"] * $row["porcao"]?>g</td>
                 <td class="info"><?php echo $row["gorduras"] * $row["porcao"]?>g</td>
                 <td class="info"><?php echo $row["proteinas"] * $row["porcao"]?>g</td>
-                <td class="info"><?php echo $row["id"]?></td>
+                <td class="info"><img id="imagemSelecionada" class="imgAlimento" src="data:image/png;base64,<?php echo base64_encode($row['img'])?>"></td>
                 
             </tr>
 <?php       
@@ -181,6 +187,8 @@
         changeColor(foodB)
         addFoodN(foodN, porcao)
         addFoodA(id, porcao, nameInput, qtdInput)
+        console.log(nameInput.value)
+        console.log(qtdInput.value)
     }
 
 
@@ -193,9 +201,9 @@
     }
 
 
-    function addFoodN(text) {
+    function addFoodN(text, porcao) {
         number = parseInt(text.textContent)
-        number += 1
+        number += porcao
         text.textContent = number
     }
 

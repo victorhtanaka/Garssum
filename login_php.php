@@ -12,7 +12,7 @@
             if ($row["senha"] == $password) {
                 session_start();
                 $_SESSION["ID_usuario"] = $row["ID_usuario"];
-                header("Location: users_user.php?ID=" . $_SESSION["ID_usuario"]);
+                header("Location: home.php");
             }
 
             else {
