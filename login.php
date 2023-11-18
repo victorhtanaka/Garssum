@@ -4,41 +4,40 @@
         <link rel="stylesheet" type="text/css" href="CSS/login.css">
     </head>
     <body>
-        <?php
+        <?php 
             include("connection.php");
         ?>
         <div class="main-container">
-            <div class="banner-div">
-                <img src="images/illu1.svg" alt="">
-            </div>
-            <div class="register-div">
-                <div class="formulario">
-                    <h1 class="h1">Seja
-                    Bem-Vindo!</h1>
+            <img src="images/illu1.svg" alt="">
+                <div class="Intro">
+                    <h1>Seja bem-vindo!</h1>
                     <br>
                     <div class="status">
                         <div class="log-status">
                             <div class="log-overlay">
-                                <a href=""> Login</a>
+                                <a href="">Entrar</a>
                             </div>
                         </div>
                         <div class="cad-status">
                             <div class="cad-overlay">
-                                <a href="cadastro.php">  Cadastre-se</a>
+                                <a href="./cadastro.php">Cadastrar</a>
                             </div>
-                            </div>
+                        </div>
                     </div>
-                    <form name="form1" id="form1" method="post" action="login_php.php">
-                        <div class="input-box">
-                            <input type="email" class="input" name="txtLogin" placeholder="Digite seu E-mail...">
+                    <form name="login-form" id="login-form" action="login_php.php" method="POST" >
+                        <br>
+                        <div class="formall">
+                            <div class="input-box">
+                                <label for="email">Email:</label>
+                                <input type="email" class="input" name="txtLogin" placeholder="Digite seu E-mail...">
+                            </div>
+                            <div class="input-box">
+                                <label for="password">Senha:</label>
+                                <input type="password" class="input" name="txtPassword" placeholder="Digite sua senha...">
+                            </div>
+                            <input class="logar" type="submit">
                         </div>
-                        <div class="input-box">
-                            <input type="password" class="input" name="txtPassword" placeholder="Digite sua senha...">
-                        </div>
-                        <input type="submit" value="Entrar" id="entrar-btn">
                     </form>
-                </div>
-                
             </div>
         </div>
 

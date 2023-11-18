@@ -19,13 +19,14 @@
 
     $id = $_SESSION["ID_usuario"];
 
-    $sql = "SELECT nome, peso, img FROM usuario WHERE ID_usuario = $id";
+    $sql = "SELECT nome, peso, altura, img FROM usuario WHERE ID_usuario = $id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) { 
         while ($row = $result->fetch_assoc()) { 
             $username = $row["nome"];
             $peso = $row["peso"];
+            $altura = $row["altura"] / 100;
             $img_perfil = $row["img"];
         }
     }
@@ -109,8 +110,8 @@
                     </div>
                     <div>
                         <img src="images/meta.svg" alt="">
-                        <p class="top-info-p">Meta</p>
-                        <p class="kilo">70kg</p>
+                        <p class="top-info-p">IMC</p>
+                        <p class="kilo"><?php echo number_format($peso / ($altura * $altura), 2, ',', '.')?></p>
                     </div>
                 </div>
 

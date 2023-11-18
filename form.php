@@ -88,7 +88,7 @@
             </div>
 
 
-            <a href="/">Deixar para mais tarde</a>
+            <a href="home.php">Deixar para mais tarde</a>
 
 
         </form>
