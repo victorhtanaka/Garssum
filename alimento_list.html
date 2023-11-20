@@ -3,125 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .allTable{
-            width: 100%;
-        }
-        .dishTd {
-            vertical-align: top;
-            width: 50%;
-        }
-        .infoTd{
-            width: 50%;
-        }
-        .infoTable {
-            width: 100%;
-        }
-        .dishTable {
-            
-            width: 100%;
-        }
-        .info{
-            border: #000 1px solid;
-            text-align: center;
-        }
-        .dish1{
-            text-align: right;
-            width: 55%;
-        }
-        .dish2{
-            text-align: center;
-        }
-        .dishHead1{
-            text-align: right;
-            width: 55%;
-        }
-        .dishHead2{
-            text-align: center;
-        }
-        .infoAdd{
-            text-align: center;
-        }
-        .dishHead{
-            text-align: center;
-        }
-        #img{
-            visibility : hidden;
-        }
-        .imgAlimento {
-            height: 40px;
-            width: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/foodlist.csS">
+    <title>Meus Alimentos</title>
 </head>
 <body>
-    <?php
-    include("connection.php");
+    <!-- Navigation Bar -->
+    <header>
+        <a href="../home.html"><img src="images/logo.svg" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="home.html">Início</a></li>
+                <li><a href="">Gráfico</a></li>
+                <li><a href="">Calendário</a></li>
+                <li><a href="">Higher or Lower</a></li>
+                <li><a href="">Meus Pratos</a></li>
+            </ul>
+        </nav>
+        <img class="profilepicture" src="images/Vector (1).svg" alt="">
+    </header>
 
-    session_start();
-    
-    if (!isset($_SESSION["ID_usuario"])) {
-        header("Location: index.php");
-    }
-    $id = $_SESSION["ID_usuario"];
-
-    $sql = "SELECT ID_alimento AS id, nome, proteinas, gorduras, carboidratos, kcal, porcao, img FROM alimento WHERE fk_usuario_ID_usuario = 1 OR $id";
-    $result = $conn->query($sql);
-    ?>
-
-    <a href="home.php">←</a> <br><br>
-    Número de registros: <?php echo $result->num_rows?><br><br>
-    <a href="alimento.php">+ Cadastrar novo alimento</a> <br><br>
-    <table class="infoTable">
-        <tr>
-            <th colspan="2">Ações</th>
-            <th>Nome</th>
-            <th>Calorias</th>
-            <th>Carboidratos</th>
-            <th>Gorduras</th>
-            <th>Proteínas</th>
-            <th>Imagem</th>
-            
-        </tr>
-        <?php
-        if ($result->num_rows > 0) {
-            $buttonIndex = 0;
-            while ($row = $result->fetch_assoc()) {
-?>          
-            <tr>
-                <td class="infoAdd"><button onclick="foodOnClick(<?php echo $row['id'];?>, false)">Editar</button></td>
-                <td class="infoAdd"><button onclick="foodOnClick(<?php echo $row['id'];?>, true)">Excluir</button></td>
-                <td class="info"><?php echo $row["nome"] . " (" . $row["porcao"] . "g)"?></td>
-                <td class="info"><?php echo $row["kcal"] * $row["porcao"]?>kcal</td>
-                <td class="info"><?php echo $row["carboidratos"] * $row["porcao"]?>g</td>
-                <td class="info"><?php echo $row["gorduras"] * $row["porcao"]?>g</td>
-                <td class="info"><?php echo $row["proteinas"] * $row["porcao"]?>g</td>
-                <td class="info"><img id="imagemSelecionada" class="imgAlimento" src="data:image/png;base64,<?php echo base64_encode($row['img'])?>"></td>
-                
+    <!-- CONTAINER -->
+    <section class="container">
+        <div class="title">
+            <h1>Meus Alimentos</h1>
+            <h2>Total de registros:php</h2>
+        </div>
+        <a href="alimento.php">+ Cadastrar novo alimento</a>
+        <table class="infoTable">
+            <tr class="tr1">
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Carboidratos</th>
+                <th>Gorduras</th>
+                <th>Proteínas</th>
+                <th>Calorias</th>
+                <th colspan="2">Ações</th>
             </tr>
-<?php       
-            }
-            
-        } 
-        else {
-?>
-        <tr>
-            <td colspan="5">Não há registros nesta tabela a exibir</td>
-        </tr>
-            
-<?php
-        }
-?>
-</table>
-<form id="form1" action="alimento_edit.php" method="post">
-<input type="hidden" name="id" id="hidId">
-</form>
+            <tr>
+                <td class="info"><img id="imagemSelecionada" class="imgAlimento" src="data:image/png;base64,<?php echo base64_encode($row['img'])?>"></td>
+                <td class="info">Nome Substituto</td>
+                <td class="info">200</td>
+                <td class="info">100</td>
+                <td class="info">788</td>
+                <td class="info">907</td>
+                <td class="infoAdd"><button class="editbut" onclick="">Editar</button></td>
+                <td class="infoAdd"><button class="cancelbut" onclick="">Excluir</button></td>
+            </tr>
+            <tr>
+                <td colspan="5">Não há registros nesta tabela a exibir</td>
+            </tr>     
+        </table>
 
+        <form id="form1" action="alimento_edit.php" method="post">
+            <input type="hidden" name="id" id="hidId">
+        </form>
+
+    </section>
 </body>
-
 <script>
-
     function foodOnClick(id, ver) {
         let input = document.getElementById("hidId")
         let form = document.getElementById("form1")
@@ -132,6 +71,5 @@
         form.submit()
 
     }
-
 </script>
 </html>

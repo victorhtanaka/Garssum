@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Light.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Medium.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProThin.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProRegular.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 400;
+}
+
+* {
+    color: #404040;
+    font-family: "GalakRound";
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  font-family: "GalakRound";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 200;
+  padding: 22px 10%;
+  background-color: #26DD9B;
+  font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+  margin-top: 2%;
+  column-gap: 40px;
+  padding: 0px 10%;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  position: relative;
+}
+
+.nav__links a:hover {
+  box-shadow: inset 160px 0 0 0 #ffffff;
+  color: #26DD9B;
+}
+
+.profilepicture {
+    width: 3.4%;
+    cursor: pointer;
+}
+
+.infoTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+.tr1 th{
+    font-weight: 400;
+    height: 2.5em;
+    background-color: #e8e8e8;
+    color: rgba(83, 83, 83, 0.5);
+}
+
+.info {
+    text-align: center;
+    height: 5em;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.title h2 {
+    color: #848484;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.title h1 {
+    color: #3e3e3e;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.infoAdd{
+    text-align: center;
+    width: 100px;
+}
+.dishHead{
+    text-align: center;
+}
+#img{
+    visibility : hidden;
+}
+.imgAlimento {
+    height: 40px;
+    width: auto;
+}
+
+.editbut {
+    background-color: #26DD9B;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 7px 20px;
+    border: 2px solid #26DD9B;
+    cursor: pointer;
+}
+
+.cancelbut {
+    padding: 7px 20px;
+    background-color: #ffffff;
+    color: #26DD9B;
+    border-radius: 20px;
+    border: 2px solid #26DD9B;
+    cursor: pointer;
+}
+
+.container a {
+    background-color: #26DD9B;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
