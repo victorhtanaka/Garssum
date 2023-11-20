@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Light.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Medium.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProThin.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProRegular.otf') format("opentype");
+  font-style: normal;    
+  font-weight: 400;
+}
+
+html {
+  overflow: hidden;
+}
+
+* {
+    font-family: "GalakRound";
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  font-family: "GalakRound";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 200;
+  padding: 22px 10%;
+  background-color: #26DD9B;
+  font-size: 14px;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  position: relative;
+}
+
+.nav__links a:hover {
+  box-shadow: inset 160px 0 0 0 #ffffff;
+  color: #26DD9B;
+}
+
+.profilepicture {
+    width: 3.4%;
+    cursor: pointer;
+}
+
+.container {
+  display: flex;
+  margin-top: 2%;
+  column-gap: 40px;
+  padding: 0px 10%;
+}
+
+.div-1 {
+    display: flex;
+}
+
+.div-2 {
+    margin-top: 2%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(63, 63, 68, 0.50);
+    border-radius: 8px;
+    background: #F7F7F7;
+    column-gap: 8em;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.items p {
+    text-align: center;
+    width: 84px;
+}
+
+.items {
+    display: flex;
+    height: 4em;
+    align-items: center;
+    column-gap: 6em;
+}
+
+.div-1 div {
+    display: flex;
+    align-items: end;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.dish {
+    display: flex;
+    margin-top: 2%;
+    font-size: 14px;
+    justify-content: space-between;
+    color: rgba(63, 63, 68, 0.50);
+    border-radius: 8px;
+    background: #F7F7F7;
+    column-gap: 8em;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.dish img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.dish div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dishinfo {
+    display: flex;
+    height: 4em;
+    align-items: center;
+    column-gap: 6em;
+}
+
+.dishinfo p {
+    width: 84px;
+    text-align: center;
+}
