@@ -1,28 +1,3 @@
-<!--<?php
-    include("connection.php");
-
-    session_start();
-        if (!isset($_SESSION["ID_usuario"])) {
-            header("Location: index.php");
-        }
-    $id = $_SESSION["ID_usuario"];
-
-    $idAlimento = $_POST["id"];
-
-    $sql = "SELECT nome, porcao, proteinas, gorduras, carboidratos, kcal FROM alimento WHERE ID_alimento = $idAlimento";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $nome = $row["nome"];
-            $porcao = $row["porcao"];
-            $proteinas = $row["proteinas"];
-            $gorduras = $row["gorduras"];
-            $carboidratos = $row["carboidratos"];
-            $kcal = $row["kcal"];
-        }
-    }
-
-?>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
