@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Light.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-Medium.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProThin.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "GalakRound";
+  src: url('../GalakRound/GalakRound-GalakProRegular.ttf') format("truetype");
+  font-style: normal;    
+  font-weight: 400;
+}
+
+* {
+    font-family: "GalakRound";
+    text-decoration: none;
+}
+
+#postreg {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: #ffffff;
+    margin: 70px auto;
+    padding: 10px 0.4em;
+    width: 30%;
+    min-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 200px 0px rgba(0, 0, 0, 0.20);
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    column-gap: 4%;
+}
+
+select {
+    font-size: 18px;
+    padding: 20px 20%;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #4F4F4F;;
+    border-color: #868686;
+    color: #4F4F4F;
+}
+
+option {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 20px 26%;
+}
+
+h1 {
+    color: #4F4F4F;
+}
+
+a {
+    font-size: 14px;
+    font-weight: 200;
+    color: #C1C1C1;
+    text-decoration: underline;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.tab {
+    row-gap: 7px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 20px;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.next button {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 1em 3em;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(90deg, #26DD9B 0%, #74EE9B 100%);
+}
+
+.kgp {
+    font-family: "Galakround";
+    font-weight: 300;
+    font-size: 18px;
+    width: 80px;
+    height: 10px;
+    vertical-align: middle;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    margin-left: 2em;
+    column-gap: 1em;
+}
+
+.kgp input {
+    font-family: "Galakround";
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    font-size: 20px;
+    height: 0.4em;
+    width: 3.6em;
+    border: none;
+}
+
+.kgp p {
+    font-size: 20px;
+}
+
+a {
+    text-align: center;
+}
